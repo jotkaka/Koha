@@ -1051,6 +1051,7 @@ sub BuildSummary {
     my @seealso;
     my @otherscript;
     my @equalterm;
+    my $control_number;
 
     if ( C4::Context->preference('marcflavour') eq 'UNIMARC' ) {
 
@@ -1279,15 +1280,17 @@ sub BuildSummary {
                 direction => $direction, linkage => $linkage
                 };
         }
+        $control_number = $record->subfield( '010', 'a' );
     }
-    $summary{mainentry}     = $authorized[0]->{heading};
-    $summary{mainmainentry} = $authorized[0]->{hemain};
-    $summary{authorized}    = \@authorized;
-    $summary{notes}         = \@notes;
-    $summary{seefrom}       = \@seefrom;
-    $summary{seealso}       = \@seealso;
-    $summary{otherscript}   = \@otherscript;
-    $summary{equalterm}     = \@equalterm;
+    $summary{mainentry}      = $authorized[0]->{heading};
+    $summary{mainmainentry}  = $authorized[0]->{hemain};
+    $summary{authorized}     = \@authorized;
+    $summary{notes}          = \@notes;
+    $summary{seefrom}        = \@seefrom;
+    $summary{seealso}        = \@seealso;
+    $summary{otherscript}    = \@otherscript;
+    $summary{equalterm}      = \@equalterm;
+    $summary{control_number} = $control_number;
     return \%summary;
 }
 
