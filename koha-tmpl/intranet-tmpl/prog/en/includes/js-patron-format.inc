@@ -35,9 +35,13 @@
             else {
                 name = firstname + ' ' + surname;
             }
-
             if ( name.replace(' ', '').length == 0 ) {
-                return _("A patron from library %s".format(patron.library.name));
+                if ( patron.library ) {
+                    return _("A patron from %s").format(patron.library.name);
+                }
+                else {
+                    return _("A patron from another library");
+                }
             }
 
             if ( config && config.hide_patron_name ) {
