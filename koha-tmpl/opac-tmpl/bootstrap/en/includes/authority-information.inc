@@ -44,7 +44,8 @@
                 <span>
                     Field of activity: [% info.field_of_activity | html %]
                     [% IF info.start_period || info.end_period %]
-                        ( [%~ IF info.start_period %]from: [% info.start_period | html %][% END %]
+                        (
+                        [%~ IF info.start_period %]from: [% info.start_period | html %][% END %]
                         [% IF info.end_period %]until: [% info.end_period | html %][% END ~%]
                         )
                     [% END %]
@@ -63,12 +64,13 @@
                 <span>
                     Associated group: [% info.associated_group | html %]
                     [% IF info.start_period || info.end_period %]
-                        ( [%~ IF info.start_period %]from: [% info.start_period | html %][% END %]
+                        (
+                        [%~ IF info.start_period %]from: [% info.start_period | html %][% END %]
                         [% IF info.end_period %]until: [% info.end_period | html %][% END ~%]
                         )
                     [% END %]
                     [% IF info.uri %]<p style="margin-bottom: 0;">URI: [% info.uri | html %]</p>[% END %]
-                    [% IF info.source_of_information %]<p style="margin-bottom: 0;">Source of information: [% info.source_of_information | html %]</p>[% END %]
+                    [% IF info.source_of_information %]<p style="margin-bottom: 0;">Source of information: [% info.source_of_information | html %]</p> [% END %]
                     [% IF info.authority_record_number %]<p style="margin-bottom: 0;">Authority record control number or standard number: [% info.authority_record_number | html %]</p>[% END %]
                 </span>
             </li>
@@ -76,7 +78,9 @@
     [% CASE 'email_address' %]
         [% IF info.email_address %]
             <li>
-                <span> Email address: [% info.email_address | html %] </span>
+                <span>
+                    Email address: [% info.email_address | html %]
+                </span>
             </li>
         [% END %]
     [% CASE 'occupation' %]
@@ -85,12 +89,13 @@
                 <span>
                     Occupation: [% info.occupation | html %]
                     [% IF info.start_period || info.end_period %]
-                        ( [%~ IF info.start_period %]from: [% info.start_period | html %][% END %]
+                        (
+                        [%~ IF info.start_period %]from: [% info.start_period | html %][% END %]
                         [% IF info.end_period %]until: [% info.end_period | html %][% END ~%]
                         )
                     [% END %]
                     [% IF info.uri %]<p style="margin-bottom: 0;">URI: [% info.uri | html %]</p>[% END %]
-                    [% IF info.source_of_information %]<p style="margin-bottom: 0;">Source of information: [% info.source_of_information | html %]</p>[% END %]
+                    [% IF info.source_of_information %]<p style="margin-bottom: 0;">Source of information: [% info.source_of_information | html %]</p> [% END %]
                     [% IF info.authority_record_number %]<p style="margin-bottom: 0;">Authority record control number or standard number: [% info.authority_record_number | html %]</p>[% END %]
                 </span>
             </li>
@@ -98,19 +103,25 @@
     [% CASE 'place_of_birth' %]
         [% IF info.place_of_birth %]
             <li>
-                <span> Place of birth: [% info.place_of_birth | html %] </span>
+                <span>
+                    Place of birth: [% info.place_of_birth | html %]
+                </span>
             </li>
         [% END %]
     [% CASE 'place_of_death' %]
         [% IF info.place_of_death %]
             <li>
-                <span> Place of death: [% info.place_of_death | html %] </span>
+                <span>
+                    Place of death: [% info.place_of_death | html %]
+                </span>
             </li>
         [% END %]
     [% CASE 'uri' %]
         [% IF info.uri %]
             <li>
-                <span> URI: [% info.uri | $raw | html %] </span>
+                <span>
+                    URI: [% info.uri | $raw | html %]
+                </span>
             </li>
         [% END %]
     [% END %]
