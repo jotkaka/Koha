@@ -43,7 +43,7 @@ if ( $op eq "export" ) {
             $marc   = marc2endnote($marc);
             $format = 'endnote';
         } elsif ( $format =~ /marcxml/ ) {
-            $marc   = marc2marcxml($marc);
+            $marc   = marc2marcxml( $marc, undef, undef, 1 );
             $format = "marcxml";
         } elsif ( $format =~ /mods/ ) {
             $marc   = marc2modsxml($marc);
@@ -62,11 +62,11 @@ if ( $op eq "export" ) {
             $marc   = $marc->as_usmarc();
             $format = "marc8";
         } elsif ( $format =~ /utf8/ ) {
-            C4::Charset::SetUTF8Flag( $marc, 1 );
+            C4::Charset::SetUTF8Flag( $marc, 0 );
             $marc   = $marc->as_usmarc();
             $format = "utf8";
         } elsif ( $format =~ /marcstd/ ) {
-            C4::Charset::SetUTF8Flag( $marc, 1 );
+            C4::Charset::SetUTF8Flag( $marc, 0 );
             ( $error, $marc ) = marc2marc( $marc, 'marcstd', C4::Context->preference('marcflavour') );
             $format = "marcstd";
         }
