@@ -50,6 +50,12 @@ __PACKAGE__->table("auth_header");
   default_value: current_timestamp
   is_nullable: 0
 
+=head2 control_number
+
+  data_type: 'varchar'
+  is_nullable: 1
+  size: 20
+
 =head2 heading
 
   data_type: 'longtext'
@@ -97,6 +103,8 @@ __PACKAGE__->add_columns(
     default_value => \"current_timestamp",
     is_nullable => 0,
   },
+  "control_number",
+  { data_type => "varchar", is_nullable => 1, size => 20 },
   "heading",
   { data_type => "longtext", is_nullable => 1 },
   "origincode",
@@ -121,6 +129,20 @@ __PACKAGE__->add_columns(
 
 __PACKAGE__->set_primary_key("authid");
 
+=head1 UNIQUE CONSTRAINTS
+
+=head2 C<cnumberidx>
+
+=over 4
+
+=item * L</control_number>
+
+=back
+
+=cut
+
+__PACKAGE__->add_unique_constraint("cnumberidx", ["control_number"]);
+
 =head1 RELATIONS
 
 =head2 import_oai_authorities
@@ -139,8 +161,9 @@ __PACKAGE__->has_many(
 );
 
 
-# Created by DBIx::Class::Schema::Loader v0.07051 @ 2025-02-21 09:20:19
-# DO NOT MODIFY THIS OR ANYTHING ABOVE! md5sum:JkZ9DrxanaiZVU6d8pzpSA
+# Created by DBIx::Class::Schema::Loader v0.07051 @ 2025-07-29 19:05:26
+# DO NOT MODIFY THIS OR ANYTHING ABOVE! md5sum:JiGprnM+lnt71oW1U3VnAA
+
 
 =head2 koha_object_class
 
