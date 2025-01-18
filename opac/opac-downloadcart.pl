@@ -97,7 +97,11 @@ if ( $bib_list && $format ) {
 
                 #NOTE: If we don't explicitly UTF-8 encode the output,
                 #the browser will guess the encoding, and it won't always choose UTF-8.
-                $output .= encode( "UTF-8", $record->as_usmarc() ) // q{};
+                my ( $error, $record_iso ) = marc2marc(
+                    $record, 'marcstd',
+                    C4::Context->preference('marcflavour')
+                );
+                $output .= encode( "UTF-8", $record_iso ) // q{};
             } elsif ( $format eq 'ris' ) {
                 $output .= marc2ris($record);
             } elsif ( $format eq 'bibtex' ) {
