@@ -415,6 +415,8 @@
                     if( parts[0] === 'duplicate' ) {
                         let today = new Date();
                         record.field('008').subfield('@', today.toISOString().substring(2,10).replaceAll('-','') + record.field('008').subfield('@').substring(6));
+                        while(record.hasField("001")) record.removeField("001");
+                        while(record.hasField("035")) record.removeField("035");
                     }
                     editor.displayRecord( record );
                     editor.focus();
