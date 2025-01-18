@@ -335,7 +335,7 @@ sub public_read_list {
         'branchaddress2', 'branchaddress3', 'branchzip',
         'branchcity',     'branchstate',    'branchcountry',
         'branchfax',      'branchemail',    'branchurl',
-        'branchillemail'
+        'branchillemail', 'geolocation'
     ];
 }
 
