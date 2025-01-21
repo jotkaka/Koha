@@ -1297,9 +1297,11 @@ if ( C4::Context->preference('OPACAuthorIdentifiersAndInformation') ) {
         next unless $authority;
         my $information = $authority->get_identifiers_and_information;
         next unless $information;
-        my ($name) =
-            map { $_->{value} }
-            grep { $_->{code} eq 'a' ? $_ : () } @{ $author->{MARCAUTHOR_SUBFIELDS_LOOP} };
+        my ($name) = join(
+            ' ',
+            map      { $_->{value} }
+                grep { $_->{code} =~ /[abcdn]/ ? $_ : () } @{ $author->{MARCAUTHOR_SUBFIELDS_LOOP} }
+        );
         push @author_information,
             { authid => $authid, name => $name, information => $information };
     }
