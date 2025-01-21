@@ -1490,6 +1490,7 @@ sub _get_marc_authors {
         next
             if $mintag && $field->tag() < $mintag
             || $maxtag && $field->tag() > $maxtag;
+        next if $field->subfield('t');
 
         my @subfields_loop;
         my @link_loop;

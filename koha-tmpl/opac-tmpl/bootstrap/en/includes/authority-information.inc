@@ -2,6 +2,11 @@
     [% SWITCH info_type %]
     [% CASE 'identifiers' %]
         [% SWITCH info.source.lower %]
+        [% CASE 'control_number' %]
+            <li class="identifier_[% info.source.lower | html %]">
+                <span>Control number: </span>
+                [% info.number | html %]
+            </li>
         [% CASE 'orcid' %]
             <li class="identifier_[% info.source.lower | html %]">
                 <span>ORCID: </span>
