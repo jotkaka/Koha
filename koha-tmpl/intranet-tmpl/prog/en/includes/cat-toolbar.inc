@@ -106,7 +106,7 @@
                 <li><a href="#" id="z3950copy">Replace record via Z39.50/SRU</a></li>
             [% END %]
 
-            [% IF CAN_user_editcatalogue_edit_catalogue or ( frameworkcode == 'FA' and CAN_user_editcatalogue_fast_cataloging ) %]
+            [% IF CAN_user_nukat_delete_biblio and CAN_user_editcatalogue_edit_catalogue or ( frameworkcode == 'FA' and CAN_user_editcatalogue_fast_cataloging ) %]
                 [% IF ( count ) %]
                     <li class="disabled"><a id="deletebiblio" data-toggle="tooltip" data-placement="left" title="[% count | html %] item(s) are attached to this record. You must delete all items before deleting this record." href="#">Delete record</a></li>
                 [% ELSIF ( biblio.subscriptions.count ) %]

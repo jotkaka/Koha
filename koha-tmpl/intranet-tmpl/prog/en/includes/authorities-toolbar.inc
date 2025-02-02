@@ -34,7 +34,7 @@
                         [% IF servers.count > 0 %]
                             <li><a id="z3950_replace" href="#">Replace record via Z39.50/SRU</a></li>
                         [% END %]
-                        [% UNLESS ( count ) %]
+                        [% UNLESS ( count ) or ! CAN_user_nukat_delete_auth %]
                             <li><a href="#" id="delAuth">Delete record</a></li>
                         [% END %]
                     </ul>

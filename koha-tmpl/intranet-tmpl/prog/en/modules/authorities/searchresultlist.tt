@@ -108,8 +108,11 @@
             Actions <b class="caret"></b></a>
             <ul class="dropdown-menu pull-right" role="menu" aria-labelledby="authactions[% resul.authid | html %]">
               <li><a href="/cgi-bin/koha/authorities/authorities.pl?authid=[% resul.authid | uri %]"><i class="fa-solid fa-pencil" aria-hidden="true"></i> Edit</a></li>
+            [% IF CAN_user_nukat_merge_auth %]
               <li><a class="merge_auth" href="#merge"><i class="fa fa-compress"></i> Merge</a></li>
+            [% END %]
               [% UNLESS ( resul.used ) %]
+            [% IF CAN_user_nukat_delete_auth %]
                   <li><form class="form_delete" method="post" action="/cgi-bin/koha/authorities/authorities-home.pl">
                       [% INCLUDE 'csrf-token.inc' %]
                       <input type="hidden" name="op" value="cud-delete" />
@@ -125,6 +128,7 @@
                       <input type="hidden" name="startfrom" value="[% startfrom | html %]" />
                       <input type="hidden" name="resultsperpage" value="[% resultsperpage | html %]" />
                       <button type="submit" class="btn btn-default"><i class="fa fa-trash"></i> Delete</button>
+            [% END %]
                   </form></li>
               [% END %]
               <li class="authority_preview">
