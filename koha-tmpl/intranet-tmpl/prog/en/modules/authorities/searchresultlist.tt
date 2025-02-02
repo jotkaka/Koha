@@ -109,10 +109,13 @@
                                             <li
                                                 ><a class="dropdown-item" href="/cgi-bin/koha/authorities/authorities.pl?authid=[% line.authid | uri %]"><i class="fa-solid fa-pencil" aria-hidden="true"></i> Edit</a></li
                                             >
+                                            [% IF CAN_user_nukat_merge_auth %]
                                             <li
                                                 ><a class="merge_auth dropdown-item" href="#merge"><i class="fa fa-compress"></i> Merge</a></li
                                             >
+                                            [% END %]
                                             [% UNLESS ( line.used ) %]
+                                            [% IF CAN_user_nukat_delete_auth %]
                                                 <li
                                                     ><form class="form_delete" method="post" action="/cgi-bin/koha/authorities/authorities-home.pl">
                                                         [% INCLUDE 'csrf-token.inc' %]
@@ -131,6 +134,7 @@
                                                         <button type="submit" class="dropdown-item"><i class="fa fa-trash"></i> Delete</button>
                                                     </form></li
                                                 >
+                                            [% END %]
                                             [% END %]
                                             <li class="authority_preview">
                                                 <a class="dropdown-item" data-authid="[% line.authid | html %]" href="/cgi-bin/koha/authorities/detail.pl?authid=[% line.authid | uri %]"><i class="fa-solid fa-eye"></i> MARC preview</a>
