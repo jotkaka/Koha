@@ -127,7 +127,7 @@
                     <li><a class="dropdown-item" href="#" id="z3950copy">Replace record via Z39.50/SRU</a></li>
                 [% END %]
 
-                [% IF CAN_user_editcatalogue_edit_catalogue or ( frameworkcode == 'FA' and CAN_user_editcatalogue_fast_cataloging ) %]
+                [% IF CAN_user_nukat_delete_biblio and CAN_user_editcatalogue_edit_catalogue or ( frameworkcode == 'FA' and CAN_user_editcatalogue_fast_cataloging ) %]
                     [% IF ( count ) %]
                         <li
                             data-bs-toggle="tooltip"
