@@ -32,7 +32,9 @@
                         <li><a id="editAuth" href="/cgi-bin/koha/authorities/authorities.pl?authid=[% authid | html %]">Edit record</a></li>
                         <li><a id="dupAuth" href="/cgi-bin/koha/authorities/authorities.pl?authid=[% authid | html %]&amp;op=duplicate">Edit as new (duplicate)</a></li>
                         [% IF servers.count > 0 %]
+                        [% IF CAN_user_nukat_merge_auth %]
                             <li><a id="z3950_replace" href="#">Replace record via Z39.50/SRU</a></li>
+                        [% END %]
                         [% END %]
                         [% UNLESS ( count ) or ! CAN_user_nukat_delete_auth %]
                             <li><a href="#" id="delAuth">Delete record</a></li>

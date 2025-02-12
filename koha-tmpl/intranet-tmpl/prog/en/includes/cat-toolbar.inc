@@ -103,7 +103,9 @@
 
             [% IF ( CAN_user_editcatalogue_edit_catalogue ) %]
                 <li><a id="duplicatebiblio" href="/cgi-bin/koha/cataloguing/addbiblio.pl?biblionumber=[% biblionumber | html %]&amp;op=duplicate">Edit as new (duplicate)</a></li>
+            [% IF ( CAN_user_nukat_merge_biblio ) %]
                 <li><a href="#" id="z3950copy">Replace record via Z39.50/SRU</a></li>
+            [% END %]
             [% END %]
 
             [% IF CAN_user_nukat_delete_biblio and CAN_user_editcatalogue_edit_catalogue or ( frameworkcode == 'FA' and CAN_user_editcatalogue_fast_cataloging ) %]
