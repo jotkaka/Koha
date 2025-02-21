@@ -805,6 +805,12 @@ sub DelAuthority {
         merge( { mergefrom => $authid } ) if !$skip_merge;
 
         my $authority = Koha::Authorities->find($authid);
+        my $del_info;
+        if ( C4::Context->preference("AuthoritiesLog") ) {
+            my $record = $authority->record;
+            $del_info = 'authority';
+            $del_info .= " BEFORE=>" . $record->as_formatted if $record;
+        }
         $schema->txn_do(
             sub {
                 $authority->move_to_deleted;    #FIXME We should define 'move' ..
@@ -812,7 +818,7 @@ sub DelAuthority {
             }
         );
 
-        logaction( "AUTHORITIES", "DELETE", $authid, "authority" ) if C4::Context->preference("AuthoritiesLog");
+        logaction( "AUTHORITIES", "DELETE", $authid, $del_info ) if C4::Context->preference("AuthoritiesLog");
         unless ($skip_record_index) {
             my $indexer = Koha::SearchEngine::Indexer->new( { index => $Koha::SearchEngine::AUTHORITIES_INDEX } );
             $indexer->index_records( $authid, "recordDelete", "authorityserver", undef );
