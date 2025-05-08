@@ -172,7 +172,7 @@ sub authenticate_api_request {
             access_token => $token,
         );
 
-        if ($valid_token) {
+        if ( $valid_token && $params->{is_plugin} ) {
             my $patron_id = Koha::ApiKeys->find( $valid_token->{client_id} )->patron_id;
             $user = Koha::Patrons->find($patron_id);
         } else {
@@ -186,7 +186,7 @@ sub authenticate_api_request {
             Koha::Exceptions::Authentication::Required->throw( error => 'Basic authentication disabled' );
         }
         $user = $c->_basic_auth($authorization_header);
-        unless ($user) {
+        unless ( $user && $params->{is_plugin} ) {
 
             # If we have "Authorization: Basic" header and authentication
             # failed, do not try other authentication means
