@@ -55,6 +55,8 @@
         <span>Delete</span>
     [% CASE 'MODIFY' %]
         <span>Modify</span>
+    [% CASE 'MERGE' %]
+        <span>Merge</span>
     [% CASE 'ISSUE' %]
         <span>Checkout</span>
     [% CASE 'RETURN' %]
