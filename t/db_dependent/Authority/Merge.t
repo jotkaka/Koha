@@ -4,7 +4,7 @@
 
 use Modern::Perl;
 use Test::NoWarnings;
-use Test::More tests => 15;
+use Test::More tests => 16;
 
 use Getopt::Long;
 use MARC::Record;
@@ -18,6 +18,7 @@ use C4::Biblio qw( AddBiblio ModBiblio );
 use Koha::Authorities;
 use Koha::Authority::ControlledIndicators;
 use Koha::Authority::MergeRequests;
+use Koha::ActionLogs;
 use Koha::Biblios;
 use Koha::Database;
 
@@ -872,6 +873,48 @@ subtest 'ModBiblio calls from merge' => sub {
 
     $schema->storage->txn_rollback;
 
+};
+
+subtest 'ModBiblio logging' => sub {
+    plan tests => 2;
+
+    t::lib::Mocks::mock_preference( "CataloguingLog", 1 );
+    my $mocked_module = Test::MockModule->new('C4::AuthoritiesMarc');
+    $mocked_module->unmock('ModBiblio');
+
+    my $auth_record = MARC::Record->new();
+    $auth_record->insert_fields_ordered( MARC::Field->new( '109', '1', ' ', a => 'Brown,', 'c' => 'Father' ) );
+    my $authid = AddAuthority( $auth_record, undef, $authtype1, { skip_record_index => 1 } );
+
+    my $biblio_record = MARC::Record->new();
+    $biblio_record->insert_fields_ordered( MARC::Field->new( '245', '1', '0', a => 'Adventures of Father Brown' ) );
+    $biblio_record->insert_fields_ordered(
+        MARC::Field->new( '609', '1', '1', a => 'Brown,', 'c' => 'Father', 9 => $authid ) );
+    my ($biblionumber) = AddBiblio( $biblio_record, '', { skip_record_index => 1 } );
+    $biblio_record->field('245')->update( a => 'New adventures of Father Brown' );
+    ModBiblio( $biblio_record, $biblionumber, '' );
+
+    my $action_logs = Koha::ActionLogs->search(
+        { object   => $biblionumber, module => 'CATALOGUING' },
+        { order_by => { -desc => 'action_id' } }
+    );
+    my $last_action = $action_logs->next;
+    is( $last_action->action, 'MODIFY', "Performed 'real' modification of bibliographic record" );
+
+    $auth_record->field('109')->update( c => 'Father ; ficticous character' );
+    ModAuthority( $authid, $auth_record, $authtype1, { skip_merge => 1 } );
+    merge(
+        {
+            mergefrom     => $authid, MARCfrom => $auth_record, mergeto => $authid, MARCto => $auth_record,
+            biblionumbers => [$biblionumber],
+        }
+    );
+    $action_logs = Koha::ActionLogs->search(
+        { object   => $biblionumber, module => 'CATALOGUING' },
+        { order_by => { -desc => 'action_id' } }
+    );
+    $last_action = $action_logs->next;
+    is( $last_action->action, 'MERGE', "Bibliographic record changed by C4::AuthoritiesMarc::merge" );
 };
 
 sub set_mocks {
