@@ -12,12 +12,24 @@ authorities:
     opac: 1
     staff_client: 1
     type: ''
+  Corporate-name-heading:
+    label: Corporate-name-heading
+    mandatory: ~
+    mappings:
+    - facet: ''
+      marc_field: 110(abcdegln)
+      marc_type: marc21
+      sort: 1
+      suggestible: ''
+    opac: 1
+    staff_client: 1
+    type: ''
   Corporate-name-see-also-from:
     label: Corporate-name-see-also-from
     mandatory: ~
     mappings:
     - facet: ''
-      marc_field: 510(abcdefghklmnoprstvxyz)
+      marc_field: 510(abcdegln)
       marc_type: marc21
       sort: 1
       suggestible: ''
@@ -29,7 +41,7 @@ authorities:
     mandatory: ~
     mappings:
     - facet: ''
-      marc_field: 410(abcdefghklmnoprstvxyz)
+      marc_field: 410(abcdegln)
       marc_type: marc21
       sort: 1
       suggestible: ''
@@ -709,7 +721,7 @@ authorities:
     mandatory: ~
     mappings:
     - facet: ''
-      marc_field: 111(acdefghjklnpqstvxyz)
+      marc_field: 111(acdegijnq)
       marc_type: marc21
       sort: 1
       suggestible: ''
@@ -721,7 +733,7 @@ authorities:
     mandatory: ~
     mappings:
     - facet: ''
-      marc_field: 111(acdefghjklnpqstvxyz)
+      marc_field: 111(acdegijnq)
       marc_type: marc21
       sort: 1
       suggestible: ''
@@ -733,7 +745,7 @@ authorities:
     mandatory: ~
     mappings:
     - facet: ''
-      marc_field: 511(acdefghjklnpqstvxyz)
+      marc_field: 511(acdegijnq)
       marc_type: marc21
       sort: 1
       suggestible: ''
@@ -745,7 +757,7 @@ authorities:
     mandatory: ~
     mappings:
     - facet: ''
-      marc_field: 411(acdefghjklnpqstvxyz)
+      marc_field: 411(acdegijnq)
       marc_type: marc21
       sort: 1
       suggestible: ''
@@ -769,7 +781,7 @@ authorities:
     mandatory: ~
     mappings:
     - facet: ''
-      marc_field: 100(abcdefghjklmnopqrstvxyz)
+      marc_field: 100(abcdegijq)
       marc_type: marc21
       sort: 1
       suggestible: ''
@@ -781,7 +793,7 @@ authorities:
     mandatory: ~
     mappings:
     - facet: ''
-      marc_field: 500(abcdefghjklmnopqrstvxyz)
+      marc_field: 500(abcdegijq)
       marc_type: marc21
       sort: 1
       suggestible: ''
@@ -793,7 +805,7 @@ authorities:
     mandatory: ~
     mappings:
     - facet: ''
-      marc_field: 400(abcdefghjklmnopqrstvxyz)
+      marc_field: 400(abcdegijq)
       marc_type: marc21
       sort: 1
       suggestible: ''
@@ -977,7 +989,7 @@ authorities:
     mandatory: ~
     mappings:
     - facet: ''
-      marc_field: 100(abcdefghjklmnopqrstvxyz)
+      marc_field: 100(abcdegijq)
       marc_type: marc21
       sort: 1
       suggestible: ''
@@ -990,6 +1002,352 @@ authorities:
     mappings:
     - facet: ''
       marc_field: 040(acd)
+      marc_type: marc21
+      sort: 1
+      suggestible: ''
+    opac: 1
+    staff_client: 1
+    type: ''
+  Geo-name-heading:
+    label: Geo-name-heading
+    mandatory: ~
+    mappings:
+    - facet: ''
+      marc_field: 151(agvxyz)
+      marc_type: marc21
+      sort: 1
+      suggestible: ''
+    opac: 1
+    staff_client: 1
+    type: ''
+  Geo-name-see-from:
+    label: Geo-name-see-from
+    mandatory: ~
+    mappings:
+    - facet: ''
+      marc_field: 451(agvxyz)
+      marc_type: marc21
+      sort: 1
+      suggestible: ''
+    opac: 1
+    staff_client: 1
+    type: ''
+  Geo-name-see-also-from:
+    label: Geo-name-see-also-from
+    mandatory: ~
+    mappings:
+    - facet: ''
+      marc_field: 551(agvxyz)
+      marc_type: marc21
+      sort: 1
+      suggestible: ''
+    opac: 1
+    staff_client: 1
+    type: ''
+  Title-heading:
+    label: Title-heading
+    mandatory: ~
+    mappings:
+    - facet: ''
+      marc_field: 130adfghklmnoprst
+      marc_type: marc21
+      sort: 1
+      suggestible: ''
+    - facet: ''
+      marc_field: 100(fghklmnoprst)
+      marc_type: marc21
+      sort: 1
+      suggestible: ''
+    - facet: ''
+      marc_field: 110(dfghklnopst)
+      marc_type: marc21
+      sort: 1
+      suggestible: ''
+    - facet: ''
+      marc_field: 111(dfghklnpst)
+      marc_type: marc21
+      sort: 1
+      suggestible: ''
+    opac: 1
+    staff_client: 1
+    type: ''
+  Title-see-from:
+    label: Title-see-from
+    mandatory: ~
+    mappings:
+    - facet: ''
+      marc_field: 430adfghklmnoprst
+      marc_type: marc21
+      sort: 1
+      suggestible: ''
+    - facet: ''
+      marc_field: 400(fghklmnoprst)
+      marc_type: marc21
+      sort: 1
+      suggestible: ''
+    - facet: ''
+      marc_field: 410(dfghklnopst)
+      marc_type: marc21
+      sort: 1
+      suggestible: ''
+    - facet: ''
+      marc_field: 411(dfghklnpst)
+      marc_type: marc21
+      sort: 1
+      suggestible: ''
+    opac: 1
+    staff_client: 1
+    type: ''
+  Title-see-also-from:
+    label: Title-see-also-from
+    mandatory: ~
+    mappings:
+    - facet: ''
+      marc_field: 530adfghklmnoprst
+      marc_type: marc21
+      sort: 1
+      suggestible: ''
+    - facet: ''
+      marc_field: 500(fghklmnoprst)
+      marc_type: marc21
+      sort: 1
+      suggestible: ''
+    - facet: ''
+      marc_field: 510(dfghklnopst)
+      marc_type: marc21
+      sort: 1
+      suggestible: ''
+    - facet: ''
+      marc_field: 511(dfghklnpst)
+      marc_type: marc21
+      sort: 1
+      suggestible: ''
+    opac: 1
+    staff_client: 1
+    type: ''
+  issn:
+    label: issn
+    mandatory: ~
+    mappings:
+    - facet: ''
+      marc_field: "022ayz"
+      marc_type: marc21
+      sort: 1
+      suggestible: ''
+    opac: 1
+    staff_client: 1
+    type: ''
+  Topical-name-heading:
+    label: Topical-name-heading
+    mandatory: ~
+    mappings:
+    - facet: ''
+      marc_field: 150(abgvxyz)
+      marc_type: marc21
+      sort: 1
+      suggestible: ''
+    opac: 1
+    staff_client: 1
+    type: ''
+  Topical-name-see-from:
+    label: Topical-name-see-from
+    mandatory: ~
+    mappings:
+    - facet: ''
+      marc_field: 450(abgvxyz)
+      marc_type: marc21
+      sort: 1
+      suggestible: ''
+    opac: 1
+    staff_client: 1
+    type: ''
+  Topical-name-see-also-from:
+    label: Topical-name-see-also-from
+    mandatory: ~
+    mappings:
+    - facet: ''
+      marc_field: 550(abgvxyz)
+      marc_type: marc21
+      sort: 1
+      suggestible: ''
+    opac: 1
+    staff_client: 1
+    type: ''
+  Subdivision:
+    label: Subdivision
+    mandatory: ~
+    mappings:
+    - facet: ''
+      marc_field: 180vxyz
+      marc_type: marc21
+      sort: 1
+      suggestible: ''
+    - facet: ''
+      marc_field: 480vxyz
+      marc_type: marc21
+      sort: 1
+      suggestible: ''
+    - facet: ''
+      marc_field: 580vxyz
+      marc_type: marc21
+      sort: 1
+      suggestible: ''
+    - facet: ''
+      marc_field: 780vxyz
+      marc_type: marc21
+      sort: 1
+      suggestible: ''
+    - facet: ''
+      marc_field: 181vxyz
+      marc_type: marc21
+      sort: 1
+      suggestible: ''
+    - facet: ''
+      marc_field: 481vxyz
+      marc_type: marc21
+      sort: 1
+      suggestible: ''
+    - facet: ''
+      marc_field: 581vxyz
+      marc_type: marc21
+      sort: 1
+      suggestible: ''
+    - facet: ''
+      marc_field: 781vxyz
+      marc_type: marc21
+      sort: 1
+      suggestible: ''
+    - facet: ''
+      marc_field: 182vxyz
+      marc_type: marc21
+      sort: 1
+      suggestible: ''
+    - facet: ''
+      marc_field: 482vxyz
+      marc_type: marc21
+      sort: 1
+      suggestible: ''
+    - facet: ''
+      marc_field: 582vxyz
+      marc_type: marc21
+      sort: 1
+      suggestible: ''
+    - facet: ''
+      marc_field: 782vxyz
+      marc_type: marc21
+      sort: 1
+      suggestible: ''
+    - facet: ''
+      marc_field: 185vxyz
+      marc_type: marc21
+      sort: 1
+      suggestible: ''
+    - facet: ''
+      marc_field: 485vxyz
+      marc_type: marc21
+      sort: 1
+      suggestible: ''
+    - facet: ''
+      marc_field: 585vxyz
+      marc_type: marc21
+      sort: 1
+      suggestible: ''
+    - facet: ''
+      marc_field: 785vxyz
+      marc_type: marc21
+      sort: 1
+      suggestible: ''
+    opac: 1
+    staff_client: 1
+    type: ''
+  Name:
+    label: Name
+    mandatory: ~
+    mappings:
+    - facet: ''
+      marc_field: 100(abcdfghjklmnopqrst)
+      marc_type: marc21
+      sort: 1
+      suggestible: ''
+    - facet: ''
+      marc_field: 400(abcdfghjklmnopqrst)
+      marc_type: marc21
+      sort: 1
+      suggestible: ''
+    - facet: ''
+      marc_field: 500(abcdfghjklmnopqrst)
+      marc_type: marc21
+      sort: 1
+      suggestible: ''
+    - facet: ''
+      marc_field: 110(abcdfghklmnoprst)
+      marc_type: marc21
+      sort: 1
+      suggestible: ''
+    - facet: ''
+      marc_field: 410(abcdfghklmnoprst)
+      marc_type: marc21
+      sort: 1
+      suggestible: ''
+    - facet: ''
+      marc_field: 510(abcdfghklmnoprst)
+      marc_type: marc21
+      sort: 1
+      suggestible: ''
+    - facet: ''
+      marc_field: 111(acdefghjklnqpst)
+      marc_type: marc21
+      sort: 1
+      suggestible: ''
+    - facet: ''
+      marc_field: 411(acdefghjklnqpst)
+      marc_type: marc21
+      sort: 1
+      suggestible: ''
+    - facet: ''
+      marc_field: 511(acdefghjklnqpst)
+      marc_type: marc21
+      sort: 1
+      suggestible: ''
+    - facet: ''
+      marc_field: 130(adfghklmnoprst)
+      marc_type: marc21
+      sort: 1
+      suggestible: ''
+    - facet: ''
+      marc_field: 430(adfghklmnoprst)
+      marc_type: marc21
+      sort: 1
+      suggestible: ''
+    - facet: ''
+      marc_field: 530(adfghklmnoprst)
+      marc_type: marc21
+      sort: 1
+      suggestible: ''
+    opac: 1
+    staff_client: 1
+    type: ''
+  Genre:
+    label: Genre
+    mandatory: ~
+    mappings:
+    - facet: ''
+      marc_field: 155(avxyz)
+      marc_type: marc21
+      sort: 1
+      suggestible: ''
+    - facet: ''
+      marc_field: 455(avxyz)
+      marc_type: marc21
+      sort: 1
+      suggestible: ''
+    - facet: ''
+      marc_field: 555(avxyz)
+      marc_type: marc21
+      sort: 1
+      suggestible: ''
+    - facet: ''
+      marc_field: 755(avxyz)
       marc_type: marc21
       sort: 1
       suggestible: ''
@@ -1046,22 +1404,22 @@ biblios:
     staff_client: 1
     type: ''
   author:
-    facet_order: 1
+    facet_order: 3
     label: Authors
     mandatory: ~
     mappings:
     - facet: 1
-      marc_field: 100a
+      marc_field: 100(abcd)
       marc_type: marc21
       sort: 1
       suggestible: 1
     - facet: 1
-      marc_field: 110a
+      marc_field: 110(abcdn)
       marc_type: marc21
       sort: 1
       suggestible: 1
     - facet: 1
-      marc_field: 111a
+      marc_field: 111(acdne)
       marc_type: marc21
       sort: 1
       suggestible: 1
@@ -1071,17 +1429,17 @@ biblios:
       sort: 1
       suggestible: ''
     - facet: 1
-      marc_field: 700a
+      marc_field: 700(abcd)
       marc_type: marc21
       sort: 1
       suggestible: 1
     - facet: 1
-      marc_field: 710a
+      marc_field: 710(abcdn)
       marc_type: marc21
       sort: 1
       suggestible: 1
     - facet: 1
-      marc_field: 711a
+      marc_field: 711(acdne)
       marc_type: marc21
       sort: 1
       suggestible: 1
@@ -1341,7 +1699,7 @@ biblios:
     staff_client: 1
     type: ''
   ccode:
-    facet_order: 7
+    facet_order: 22
     label: Collections
     mandatory: ~
     mappings:
@@ -1471,7 +1829,19 @@ biblios:
     mandatory: ~
     mappings:
     - facet: ''
-      marc_field: '040'
+      marc_field: '040ac'
+      marc_type: marc21
+      sort: 1
+      suggestible: ''
+    opac: 1
+    staff_client: 1
+    type: ''
+  code-institution-mod:
+    label: code-institution-mod
+    mandatory: ~
+    mappings:
+    - facet: ''
+      marc_field: '040d'
       marc_type: marc21
       sort: 1
       suggestible: ''
@@ -1717,10 +2087,11 @@ biblios:
     staff_client: 1
     type: date
   date-of-publication:
-    label: date-of-publication
+    facet_order: 7
+    label: Rok wydania
     mandatory: ~
     mappings:
-    - facet: ''
+    - facet: 1
       marc_field: 008_/7-10
       marc_type: marc21
       sort: 1
@@ -1947,7 +2318,7 @@ biblios:
         suggestible: ''
     type: geo_point
   holdingbranch:
-    facet_order: 8
+    facet_order: 19
     label: Holding libraries
     mandatory: ~
     mappings:
@@ -1965,7 +2336,7 @@ biblios:
     staff_client: 1
     type: string
   homebranch:
-    facet_order: 9
+    facet_order: 20
     label: Home libraries
     mandatory: ~
     mappings:
@@ -2271,8 +2642,8 @@ biblios:
     staff_client: 1
     type: ''
   itype:
-    facet_order: 2
-    label: Item types
+    facet_order: 1
+    label: Typ dokumentu
     mandatory: ~
     mappings:
     - facet: 1
@@ -2323,7 +2694,32 @@ biblios:
       sort: 1
       suggestible: ''
     - facet: ''
+      marc_field: '2409'
+      marc_type: marc21
+      sort: 1
+      suggestible: ''
+    - facet: ''
       marc_field: '2459'
+      marc_type: marc21
+      sort: 1
+      suggestible: ''
+    - facet: ''
+      marc_field: '3809'
+      marc_type: marc21
+      sort: 1
+      suggestible: ''
+    - facet: ''
+      marc_field: '3859'
+      marc_type: marc21
+      sort: 1
+      suggestible: ''
+    - facet: ''
+      marc_field: '3869'
+      marc_type: marc21
+      sort: 1
+      suggestible: ''
+    - facet: ''
+      marc_field: '3889'
       marc_type: marc21
       sort: 1
       suggestible: ''
@@ -2404,6 +2800,11 @@ biblios:
       suggestible: ''
     - facet: ''
       marc_field: '6569'
+      marc_type: marc21
+      sort: 1
+      suggestible: ''
+    - facet: ''
+      marc_field: '6589'
       marc_type: marc21
       sort: 1
       suggestible: ''
@@ -2623,7 +3024,7 @@ biblios:
     staff_client: 1
     type: ''
   ln:
-    facet_order: 10
+    facet_order: 6
     label: Languages
     mandatory: ~
     mappings:
@@ -2633,7 +3034,7 @@ biblios:
       sort: 1
       suggestible: ''
     - facet: 1
-      marc_field: 041adeij
+      marc_field: 041adegij
       marc_type: marc21
       sort: 1
       suggestible: ''
@@ -2673,7 +3074,7 @@ biblios:
     label: local-classification
     mandatory: ~
     mappings:
-    - facet: 1
+    - facet: ''
       marc_field: 952o
       marc_type: marc21
       sort: 0
@@ -2709,7 +3110,7 @@ biblios:
     staff_client: 1
     type: number
   location:
-    facet_order: 3
+    facet_order: 21
     label: Location
     mandatory: ~
     mappings:
@@ -3228,11 +3629,18 @@ biblios:
     staff_client: 1
     type: ''
   pl:
-    label: pl
+    facet_order: 24
+    label: Miejsce wydania
     mandatory: ~
+    authorised_value_category: COUNTRY_CODES
     mappings:
-    - facet: ''
+    - facet: 1
       marc_field: 008_/15-17
+      marc_type: marc21
+      sort: 1
+      suggestible: ''
+    - facet: 1
+      marc_field: 044a
       marc_type: marc21
       sort: 1
       suggestible: ''
@@ -3297,12 +3705,12 @@ biblios:
     label: publisher
     mandatory: ~
     mappings:
-    - facet: 1
+    - facet: ''
       marc_field: 260b
       marc_type: marc21
       sort: 1
       suggestible: ''
-    - facet: 1
+    - facet: ''
       marc_field: 264b
       marc_type: marc21
       sort: 1
@@ -3310,6 +3718,19 @@ biblios:
     - facet: 1
       marc_field: 210c
       marc_type: unimarc
+      sort: 1
+      suggestible: ''
+    opac: 1
+    staff_client: 1
+    type: string
+  publisher-710:
+    facet_order: 23
+    label: Wydawca
+    mandatory: ~
+    mappings:
+    - facet: 1
+      marc_field: 710(abcdn)
+      marc_type: marc21
       sort: 1
       suggestible: ''
     opac: 1
@@ -3547,12 +3968,47 @@ biblios:
     staff_client: 1
     type: ''
   su-geo:
-    facet_order: 4
-    label: Places
+    facet_order: 11
+    label: "Temat: Miejsce"
     mandatory: ~
     mappings:
     - facet: 1
       marc_field: 651a
+      marc_type: marc21
+      sort: 1
+      suggestible: ''
+    - facet: 1
+      marc_field: 600z
+      marc_type: marc21
+      sort: 1
+      suggestible: ''
+    - facet: 1
+      marc_field: 610z
+      marc_type: marc21
+      sort: 1
+      suggestible: ''
+    - facet: 1
+      marc_field: 611z
+      marc_type: marc21
+      sort: 1
+      suggestible: ''
+    - facet: 1
+      marc_field: 630z
+      marc_type: marc21
+      sort: 1
+      suggestible: ''
+    - facet: 1
+      marc_field: 650z
+      marc_type: marc21
+      sort: 1
+      suggestible: ''
+    - facet: 1
+      marc_field: 651z
+      marc_type: marc21
+      sort: 1
+      suggestible: ''
+    - facet: 1
+      marc_field: 655z
       marc_type: marc21
       sort: 1
       suggestible: ''
@@ -3565,92 +4021,57 @@ biblios:
     staff_client: 1
     type: string
   subject:
-    facet_order: 6
+    facet_order: 8
     label: Topics
     mandatory: ~
     mappings:
-    - facet: 1
-      marc_field: 600a
+    - facet: ''
+      marc_field: 600
       marc_type: marc21
       sort: 1
       suggestible: 1
-    - facet: 1
-      marc_field: 600t
+    - facet: ''
+      marc_field: 610
       marc_type: marc21
       sort: 1
       suggestible: 1
-    - facet: 1
-      marc_field: 610a
+    - facet: ''
+      marc_field: 611
       marc_type: marc21
       sort: 1
       suggestible: 1
-    - facet: 1
-      marc_field: 610t
+    - facet: ''
+      marc_field: 630
       marc_type: marc21
       sort: 1
       suggestible: 1
-    - facet: 1
-      marc_field: '611'
+    - facet: ''
+      marc_field: 648
       marc_type: marc21
       sort: 1
       suggestible: 1
-    - facet: 1
-      marc_field: 630n
+    - facet: ''
+      marc_field: 650
       marc_type: marc21
       sort: 1
       suggestible: 1
-    - facet: 1
-      marc_field: 630r
+    - facet: ''
+      marc_field: 651
+      marc_type: marc21
+      sort: 1
+      suggestible: 1
+    - facet: ''
+      marc_field: 655
+      marc_type: marc21
+      sort: 1
+      suggestible: 1
+    - facet: ''
+      marc_field: 658
       marc_type: marc21
       sort: 1
       suggestible: 1
     - facet: 1
       marc_field: 650a
-      marc_type: marc21
-      sort: 1
-      suggestible: 1
-    - facet: 1
-      marc_field: 650b
-      marc_type: marc21
-      sort: 1
-      suggestible: 1
-    - facet: 1
-      marc_field: 650c
-      marc_type: marc21
-      sort: 1
-      suggestible: 1
-    - facet: 1
-      marc_field: 650d
-      marc_type: marc21
-      sort: 1
-      suggestible: 1
-    - facet: 1
-      marc_field: 650v
-      marc_type: marc21
-      sort: 1
-      suggestible: 1
-    - facet: 1
-      marc_field: 650x
-      marc_type: marc21
-      sort: 1
-      suggestible: 1
-    - facet: 1
-      marc_field: 650y
-      marc_type: marc21
-      sort: 1
-      suggestible: 1
-    - facet: 1
-      marc_field: 650z
-      marc_type: marc21
-      sort: 1
-      suggestible: 1
-    - facet: 1
-      marc_field: '651'
-      marc_type: marc21
-      sort: 1
-      suggestible: 1
-    - facet: 1
-      marc_field: 653a
       marc_type: marc21
       sort: 1
       suggestible: 1
@@ -3702,6 +4123,92 @@ biblios:
     - facet: 1
       marc_field: '610'
       marc_type: unimarc
+      sort: 1
+      suggestible: 1
+    opac: 1
+    staff_client: 1
+    type: string
+  narrow-topic:
+    facet_order: 14
+    label: Zawęź Temat/Gatunek/Formę
+    mandatory: ~
+    mappings:
+    - facet: 1
+      marc_field: 600x
+      marc_type: marc21
+      sort: 1
+      suggestible: 1
+    - facet: 1
+      marc_field: 610x
+      marc_type: marc21
+      sort: 1
+      suggestible: 1
+    - facet: 1
+      marc_field: 611x
+      marc_type: marc21
+      sort: 1
+      suggestible: 1
+    - facet: 1
+      marc_field: 630x
+      marc_type: marc21
+      sort: 1
+      suggestible: 1
+    - facet: 1
+      marc_field: 650x
+      marc_type: marc21
+      sort: 1
+      suggestible: 1
+    - facet: 1
+      marc_field: 651x
+      marc_type: marc21
+      sort: 1
+      suggestible: 1
+    - facet: 1
+      marc_field: 655x
+      marc_type: marc21
+      sort: 1
+      suggestible: 1
+    opac: 1
+    staff_client: 1
+    type: string
+  narrow-genre:
+    facet_order: 15
+    label: Zawęź Temat/Gatunek/Formę - Forma publikacji
+    mandatory: ~
+    mappings:
+    - facet: 1
+      marc_field: 600v
+      marc_type: marc21
+      sort: 1
+      suggestible: 1
+    - facet: 1
+      marc_field: 610v
+      marc_type: marc21
+      sort: 1
+      suggestible: 1
+    - facet: 1
+      marc_field: 611v
+      marc_type: marc21
+      sort: 1
+      suggestible: 1
+    - facet: 1
+      marc_field: 630v
+      marc_type: marc21
+      sort: 1
+      suggestible: 1
+    - facet: 1
+      marc_field: 650v
+      marc_type: marc21
+      sort: 1
+      suggestible: 1
+    - facet: 1
+      marc_field: 651v
+      marc_type: marc21
+      sort: 1
+      suggestible: 1
+    - facet: 1
+      marc_field: 655v
+      marc_type: marc21
       sort: 1
       suggestible: 1
     opac: 1
@@ -4331,33 +4838,33 @@ biblios:
     label: Series
     mandatory: ~
     mappings:
-    - facet: 1
+    - facet: ''
       marc_field: 440a
       marc_type: marc21
       sort: 1
       suggestible: ''
-    - facet: 1
+    - facet: ''
       marc_field: 490a
       marc_type: marc21
       sort: 1
       suggestible: ''
     - facet: 1
-      marc_field: 800t
+      marc_field: 800(tnp)
       marc_type: marc21
       sort: 1
       suggestible: ''
     - facet: 1
-      marc_field: 810t
+      marc_field: 810(tp)
       marc_type: marc21
       sort: 1
       suggestible: ''
     - facet: 1
-      marc_field: 811t
+      marc_field: 811(tp)
       marc_type: marc21
       sort: 1
       suggestible: ''
     - facet: 1
-      marc_field: 830a
+      marc_field: 830(anp)
       marc_type: marc21
       sort: 1
       suggestible: ''
@@ -4370,36 +4877,37 @@ biblios:
     staff_client: 1
     type: string
   title-uniform:
-    label: title-uniform
+    facet_order: 4
+    label: Dzieło
     mandatory: ~
     mappings:
-    - facet: ''
-      marc_field: '130'
+    - facet: 1
+      marc_field: '130(anp)'
       marc_type: marc21
       sort: 1
       suggestible: ''
-    - facet: ''
-      marc_field: '240'
+    - facet: 1
+      marc_field: '240(anp)'
       marc_type: marc21
       sort: 1
       suggestible: ''
-    - facet: ''
-      marc_field: 700t
+    - facet: 1
+      marc_field: 700(tnp)
       marc_type: marc21
       sort: 1
       suggestible: ''
-    - facet: ''
-      marc_field: 710t
+    - facet: 1
+      marc_field: 710(tp)
       marc_type: marc21
       sort: 1
       suggestible: ''
-    - facet: ''
-      marc_field: 711t
+    - facet: 1
+      marc_field: 711(tp)
       marc_type: marc21
       sort: 1
       suggestible: ''
-    - facet: ''
-      marc_field: '730'
+    - facet: 1
+      marc_field: 730(anp)
       marc_type: marc21
       sort: 1
       suggestible: ''
@@ -4466,3 +4974,160 @@ biblios:
     opac: 1
     staff_client: 1
     type: ''
+  su-work:
+    facet_order: 10
+    label: "Temat: Dzieło"
+    mappings:
+    - facet: 1
+      marc_field: 630(anp)
+      marc_type: marc21
+      sort: 1
+      suggestible: ''
+    - facet: 1
+      marc_field: 600(tnp)
+      marc_type: marc21
+      sort: 1
+      suggestible: ''
+    - facet: 1
+      marc_field: 610(tp)
+      marc_type: marc21
+      sort: 1
+      suggestible: ''
+    - facet: 1
+      marc_field: 611(tp)
+      marc_type: marc21
+      sort: 1
+      suggestible: ''
+    opac: 1
+    staff_client: 1
+    type: ''
+  su-name:
+    facet_order: 9
+    label: "Temat: Nazwa"
+    mappings:
+    - facet: 1
+      marc_field: 600(abcd)
+      marc_type: marc21
+      sort: 1
+      suggestible: ''
+    - facet: 1
+      marc_field: 610(abcdn)
+      marc_type: marc21
+      sort: 1
+      suggestible: ''
+    - facet: 1
+      marc_field: 611(acden)
+      marc_type: marc21
+      sort: 1
+      suggestible: ''
+    opac: 1
+    staff_client: 1
+    type: ''
+  su-chron:
+    facet_order: 12
+    label: "Temat: Czas"
+    mappings:
+    - facet: 1
+      marc_field: 648a
+      marc_type: marc21
+      sort: 1
+      suggestible: ''
+    - facet: 1
+      marc_field: 600y
+      marc_type: marc21
+      sort: 1
+      suggestible: ''
+    - facet: 1
+      marc_field: 610y
+      marc_type: marc21
+      sort: 1
+      suggestible: ''
+    - facet: 1
+      marc_field: 611y
+      marc_type: marc21
+      sort: 1
+      suggestible: ''
+    - facet: 1
+      marc_field: 630y
+      marc_type: marc21
+      sort: 1
+      suggestible: ''
+    - facet: 1
+      marc_field: 650y
+      marc_type: marc21
+      sort: 1
+      suggestible: ''
+    - facet: 1
+      marc_field: 651y
+      marc_type: marc21
+      sort: 1
+      suggestible: ''
+    - facet: 1
+      marc_field: 655y
+      marc_type: marc21
+      sort: 1
+      suggestible: ''
+    opac: 1
+    staff_client: 1
+    type: ''
+  su-gen:
+    facet_order: 13
+    label: Gatunek/Forma
+    mappings:
+    - facet: 1
+      marc_field: 655a
+      marc_type: marc21
+      sort: 1
+      suggestible: ''
+    opac: 1
+    staff_client: 1
+    type: ''
+  discipline:
+    facet_order: 16
+    label: Dziedzina i ujęcie
+    mappings:
+    - facet: 1
+      marc_field: 658a
+      marc_type: marc21
+      sort: 1
+      suggestible: ''
+    opac: 1
+    staff_client: 1
+    type: ''
+  form-and-type:
+    facet_order: 2
+    label: Forma i typ
+    mappings:
+    - facet: 1
+      marc_field: 380a
+      marc_type: marc21
+      sort: 0
+      suggestible: ''
+    opac: 1
+    staff_client: 1
+    type: ''
+  target:
+    facet_order: 17
+    label: Odbiorca
+    mappings:
+    - facet: 1
+      marc_field: 385a
+      marc_type: marc21
+      sort: 1
+      suggestible: ''
+    opac: 1
+    staff_client: 1
+    type: ''
+  cult-ar:
+    facet_order: 18
+    label: Przynależność kulturowa
+    mappings:
+    - facet: 1
+      marc_field: 386a
+      marc_type: marc21
+      sort: 1
+      suggestible: ''
+    opac: 1
+    staff_client: 1
+    type: ''
+
