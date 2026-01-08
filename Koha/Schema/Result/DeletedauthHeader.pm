@@ -50,6 +50,12 @@ __PACKAGE__->table("deletedauth_header");
   default_value: current_timestamp
   is_nullable: 0
 
+=head2 control_number
+
+  data_type: 'varchar'
+  is_nullable: 1
+  size: 20
+
 =head2 heading
 
   data_type: 'longtext'
@@ -97,6 +103,8 @@ __PACKAGE__->add_columns(
     default_value => \"current_timestamp",
     is_nullable => 0,
   },
+  "control_number",
+  { data_type => "varchar", is_nullable => 1, size => 20 },
   "heading",
   { data_type => "longtext", is_nullable => 1 },
   "origincode",
@@ -121,9 +129,23 @@ __PACKAGE__->add_columns(
 
 __PACKAGE__->set_primary_key("authid");
 
+=head1 UNIQUE CONSTRAINTS
 
-# Created by DBIx::Class::Schema::Loader v0.07051 @ 2025-02-21 09:29:25
-# DO NOT MODIFY THIS OR ANYTHING ABOVE! md5sum:XXLocKE3YUBM3xEPLuIN+g
+=head2 C<cnumberidx>
+
+=over 4
+
+=item * L</control_number>
+
+=back
+
+=cut
+
+__PACKAGE__->add_unique_constraint("cnumberidx", ["control_number"]);
+
+
+# Created by DBIx::Class::Schema::Loader v0.07051 @ 2026-01-08 16:52:35
+# DO NOT MODIFY THIS OR ANYTHING ABOVE! md5sum:VdCzcbfSoDic5q47+Pu+Sg
 
 
 # You can replace this text with custom code or comments, and it will be preserved on regeneration
