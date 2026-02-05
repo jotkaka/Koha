@@ -2055,32 +2055,36 @@
     <xsl:if test="marc:datafield[@tag=035]">
         <span class="results_summary other_control_numbers">
             <span class="label">Inne nry kontrolne: </span>
-            <span property="other_control_numbers">
-                <xsl:for-each select="marc:datafield[@tag='035']">
-                    <xsl:variable name="subfield_a" select="marc:subfield[@code='a']"/>
-                    <xsl:choose>
-                        <xsl:when test="starts-with($subfield_a, '(OCoLC)')">
-                            <a href="https://search.worldcat.org/title/{substring-after($subfield_a, '(OCoLC)')}"
-                            target="_blank">
+            <xsl:for-each select="marc:datafield[@tag='035']">
+                <xsl:variable name="subfield_a" select="marc:subfield[@code='a']"/>
+                <xsl:choose>
+                    <xsl:when test="starts-with($subfield_a, '(OCoLC)')">
+                        <a href="https://search.worldcat.org/title/{substring-after($subfield_a, '(OCoLC)')}"
+                        target="_blank">
+                            <span property="other_control_numbers">
                                 <xsl:value-of select="$subfield_a"/>
-                            </a>
-                        </xsl:when>
-                        <xsl:when test="starts-with($subfield_a, '(OMNIS)')">
-                            <a href="https://katalogi.bn.org.pl/permalink/48OMNIS_NLOP/1aot9i7/alma{substring-after($subfield_a, '(OMNIS)')}"
-                            target="_blank">
+                            </span>
+                        </a>
+                    </xsl:when>
+                    <xsl:when test="starts-with($subfield_a, '(OMNIS)')">
+                        <a href="https://katalogi.bn.org.pl/permalink/48OMNIS_NLOP/1aot9i7/alma{substring-after($subfield_a, '(OMNIS)')}"
+                        target="_blank">
+                            <span property="other_control_numbers">
                                 <xsl:value-of select="$subfield_a"/>
-                            </a>
-                        </xsl:when>
-                        <xsl:otherwise>
+                            </span>
+                        </a>
+                    </xsl:when>
+                    <xsl:otherwise>
+                        <span property="other_control_numbers">
                             <xsl:value-of select="$subfield_a"/>
-                        </xsl:otherwise>
-                    </xsl:choose>
+                        </span>
+                    </xsl:otherwise>
+                </xsl:choose>
 
-                    <xsl:if test="position() != last()">
-                        <xsl:text> | </xsl:text>
-                    </xsl:if>
-                </xsl:for-each>
-            </span>
+                <xsl:if test="position() != last()">
+                    <xsl:text> | </xsl:text>
+                </xsl:if>
+            </xsl:for-each>
         </span>
     </xsl:if>
 
