@@ -90,6 +90,14 @@ if ( $op eq "do_search" ) {
             }
         }
     }
+    my $biblio_tag = substr( $index, 4, 3 );
+    if ( $biblio_tag =~ /38.|6[45]8/ ) {
+        push @marclist,  'lc-card-number';
+        push @and_or,    'and';
+        push @excluding, '';
+        push @operator,  'start';
+        push @value,     'p';
+    }
 
     my $builder      = Koha::SearchEngine::QueryBuilder->new( { index => $Koha::SearchEngine::AUTHORITIES_INDEX } );
     my $searcher     = Koha::SearchEngine::Search->new( { index => $Koha::SearchEngine::AUTHORITIES_INDEX } );
