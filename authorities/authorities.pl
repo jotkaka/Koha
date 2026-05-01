@@ -690,17 +690,6 @@ if ( $op eq "cud-add" ) {
                 substr( $s008, 39, 1, 'c' );
                 $record->field('008')->update($s008);
                 $record->insert_fields_ordered( MARC::Field->new( '040', ' ', ' ', f => 'kaba' ) );
-                my $heading_field = $record->field('1..');
-                if ( $heading_field->tag ne '130'
-                    && !$heading_field->subfield('t') )
-                {
-                    my @heading_subfields  = $heading_field->subfields;
-                    my $last_subfield_code = $heading_subfields[$#heading_subfields]->[0];
-                    my $last_subfield_val  = $heading_subfields[$#heading_subfields]->[1];
-                    unless ( substr( $last_subfield_val, -1 ) eq '.' ) {
-                        $heading_field->update( $last_subfield_code => "$last_subfield_val." );
-                    }
-                }
                 $dbn_copy = 1;
             } else {
                 if ( substr( $s008, 15, 1 ) eq 'a' ) {

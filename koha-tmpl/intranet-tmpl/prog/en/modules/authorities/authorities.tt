@@ -451,7 +451,7 @@
 
     [% IF dbn_copy %]
         <script>
-            if (! window.confirm("Tworzysz rekord CKHF w NUKAT jako kopię rekordu DBN.\nJeśli nie to było twoim celem, wybierz 'Anuluj'.\nJeśli tak, wybierz 'OK', dokonaj koniecznych korekt (pole 040, kropka na końcu 1XX itp.) i zapisz rekord.")) {
+            if (! window.confirm("Tworzysz rekord CKHF w NUKAT jako kopię rekordu DBN.\nJeśli nie to było twoim celem, wybierz 'Anuluj'.\nJeśli tak, wybierz 'OK', pamiętaj, żeby nie zmieniać ani nie uzupełniać niczego w rekordzie, zwłaszcza w polu 1XX (z wyjątkiem uzupełnienia pola 040).")) {
                 history.back();
             }
         </script>
